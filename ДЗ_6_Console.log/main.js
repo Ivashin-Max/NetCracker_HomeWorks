@@ -1,8 +1,8 @@
 console.logTime = console.log.bind(console);
 
-console.log = function (data) {
-	let time = `Логгер (${new Date().toUTCString()}) `;
-	this.logTime(time, data);
+console.log = function (...data) {
+	let time = `Время (${new Date().toLocaleTimeString()}) `;
+	this.logTime(time, ...data);
 };
-
-console.log('Проверка логгера');
+let q = 'wrewerw'
+console.log('Проверка логгера', q, 123123);
