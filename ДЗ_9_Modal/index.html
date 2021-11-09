@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ivashin Max 2021">
+	<title>Ivashin Maksim portfolio</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="navbar">
+				<div class="navbar__buttons">
+					<ul>
+						<li><a href="#aboutMeContainer">Про меня</a>
+							<ul class="dropdown">
+								<li>А тут</li>
+								<li>Я сделал dropdown</li>
+								<li>не знаю зачем</li>
+							</ul>
+						</li>
+						<li><a href="#skills">Мои навыки</a></li>
+						<li><a href="#contacts">Мои контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="aboutMeContainer" id="aboutMeContainer">
+				<div class="aboutMe">
+					<h1>Привет, меня зовут Максим Ивашин!</h1>
+					<p>на этой странице я покажу свои умения верстки</p>
+				</div>
+			</section>
+			<section class="skills" id="skills">
+				<div class="container__skills">
+					<p>Мои навыки</p>
+					<img src="img/icons/html5_logo.svg" alt="html5">
+					<img src="img/icons/css3_logo.svg" alt="css3">
+					<img src="img/icons/git_logo.svg" alt="git">
+				</div>
+			</section>
+			<section class="contacts" id="contacts">
+				<div class="contacts__header">
+					<p>Мои контакты</p>
+				</div>
+				<div class="contacts__links">
+					<div class="contacts__links git">
+						<a href="https://github.com/Ivashin-Max" id="git">
+							<img src="img/icons/github.svg" alt="github logo">GitHub
+						</a>
+					</div>
+					<div class="contacts__links telegram">
+						<a href="https://t.me/IvashinMax" id="telegram">
+							<img src="img/icons/telegram_logo.svg" alt="github logo">Telegram
+						</a>
+					</div>
+					<div class="contacts__links vk">
+						<a href="https://vk.com/ivashinmax" id="vk">
+							<img src="img/icons/iconmonstr-vk-4.svg" alt="github logo">VK
+						</a>
+					</div>
+				</div>
+				<div class="contacts__form">
+					<div class="contacts__form_wrapper">
+						<form action="#">
+							<div class="placeholder-container">
+								<input type="text" placeholder=' ' id="name">
+								<label>Введите имя</label>
+							</div>
+							<div class="placeholder-container">
+								<input type="text" placeholder=' ' id="lastname">
+								<label>Введите фамилию</label>
+							</div>
+							<div class="placeholder-container">
+								<textarea name="" id="textarea" placeholder=" "></textarea>
+								<label>Оставьте отзыв о сайте</label>
+							</div>
+							<div class="buttons">
+								<button id='submit' onclick="submit1();">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer_info">
+				<p id="footer" title="a сюда я зачем то добавил тайтл">© Created by Max in 2021</p>
+			</div>
+		</footer>
+	</div>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
