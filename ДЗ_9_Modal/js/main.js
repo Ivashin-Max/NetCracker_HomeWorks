@@ -1,4 +1,28 @@
 
+
+function initModal() {
+	const dropdown = document.getElementsByClassName('navbar__buttons')[0].firstElementChild.children
+	const modal = document.getElementsByClassName('modal')[0]
+	const modalClose = document.getElementsByClassName('modal_content_close')[0]
+
+	modalClose.addEventListener('click', closeModal)
+
+	function closeModal() {
+		modal.classList.remove('open')
+	}
+
+	for (let i = 0; i < dropdown.length; i++) {
+		const element = dropdown[i];
+		element.addEventListener('click', showModal)
+	}
+
+	function showModal() {
+		modal.classList.add('open')
+	}
+}
+initModal()
+
+
 function submit1() {
 	window.event.preventDefault();
 	let name = document.getElementById('name')
@@ -13,3 +37,4 @@ function submit1() {
 	lastname.value = '';
 	textarea.value = '';
 }
+
