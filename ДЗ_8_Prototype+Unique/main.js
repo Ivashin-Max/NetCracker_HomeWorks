@@ -1,6 +1,6 @@
 
 //Unique------------------------------
-let simpleArr = [1, 2, 3, 3, 4, 6, '11', '11', '2'];
+let simpleArr = [1, 2, 3, 3, 4, 6, '11', '11', '8'];
 let objectArr = [{ id: 1, name: 'Vasya' }, { id: 2, name: 'Petya' }, { age: 18, name: 'Max' }, { age: 19, name: 'Max' }, { age: 146, name: 'Max' },]
 
 
@@ -24,17 +24,20 @@ Array.prototype.unique = function () {
 	return resultArr
 
 }
-console.log(`Unique_test---`);
+console.groupCollapsed('Unique_test')
+
 console.log(`Исходный массив примитивов`, simpleArr);
 console.log(`Исходный "сложный" массив `, objectArr);
 console.log(`Возврат уникального массива из примитивов`, simpleArr.unique());
-console.log(`Возврат уникального массива из "сложного" массива по ключу id`, objectArr.unique('id'));
-console.log(`Возврат уникального массива из "сложного" массива по ключу name`, objectArr.unique('age'));
+console.log(`Возврат уникального массива из "сложного" массива c 1 ключом id`, objectArr.unique('id'));
+console.log(`Возврат уникального массива из "сложного"  массива c 1 ключом	 age`, objectArr.unique('age'));
 
+console.groupEnd()
 
 
 //Prototype-------------------------
-console.log('Prototype test------------');
+
+
 function inherit(ParentClass) {
 	function ChildClass() { }
 	ChildClass.prototype = Object.create(ParentClass.prototype);
@@ -51,6 +54,10 @@ Parent.prototype.init = function (name) {
 Parent.prototype.print = function () {
 	console.log(this.name);
 };
+let parent = new Parent;
+parent.init('Max')
+console.groupCollapsed('Наследование')
+parent.print();
 
 //Функция наследования из презентации
 let Child = inherit(Parent);
@@ -64,7 +71,7 @@ Child.prototype.init =
 let max = new Child();
 
 max.init('Max');
-
+console.log('переопределние метода через супер');
 max.print();
 
 
@@ -86,11 +93,18 @@ let third = {
 	isPretty: true,
 	__proto__: second
 }
+console.groupCollapsed('Тройное наследование')
+console.log('Исходные объекты');
+console.log('first', first);
+console.log('second', second);
+console.log('third', third);
 
 //Третий наследует от первого
+console.log('Вызов у третьего объекта метод из первого');
 third.sayHi()
 //И от второго тоже
-console.log(third.age);
+console.log('Смотрим значение второго объекта из третьего', third.age);
+console.groupEnd()
 
 
 
